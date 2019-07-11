@@ -7,6 +7,9 @@
     "server-dev": "nodemon server/index.js",
     "start": "node server/index.js",
     "react-dev": "webpack -d --watch",
+    "seed": "psql postgres < schema.sql",
+    "server:start":"pg_ctl -D /usr/local/var/postgres start",
+    "server:stop":"pg_ctl -D /usr/local/var/postgres stop",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,14 +25,15 @@
   "devDependencies": {},
   "dependencies": {
     "axios": "^0.18.0",
-    "body-parser": "^1.17.0",
-    "express": "^4.15.0",
-    "morgan": "^1.9.1",
     "babel-core": "^6.23.1",
     "babel-loader": "^6.3.2",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-react": "^6.23.0",
+    "body-parser": "^1.17.0",
+    "express": "^4.15.0",
     "live-server": "^1.2.1",
+    "morgan": "^1.9.1",
+    "pg-promise": "^8.7.3",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "webpack": "^2.2.1"

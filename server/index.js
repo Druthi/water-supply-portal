@@ -1,7 +1,8 @@
 const express = require('express');
 let app = express();
 const morgan = require('morgan');
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
+var db = require ('../database/index')
 
 
 app.use(morgan());
