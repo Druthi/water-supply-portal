@@ -8,7 +8,15 @@ var db = require ('../database/index')
 app.use(morgan());
 app.use(bodyParser());
 app.use(express.static(__dirname + '/../client/dist'));
-
+app.get('/connections', (req,res) =>{
+  db.getData((err, data) => {
+    if(err) {
+      res.sendStatus(404);
+    }else{
+      res.status(200).json(data);
+    }
+  });
+});
 
 let port = process.env.PORT || 3000;
 
