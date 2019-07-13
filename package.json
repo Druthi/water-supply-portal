@@ -37,6 +37,7 @@
     "pg-promise": "^8.7.3",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-select": "^3.0.4",
     "webpack": "^2.2.1"
   }
 }
