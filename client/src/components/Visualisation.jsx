@@ -3,6 +3,7 @@ import axios from 'axios';
 import XAxis from './XAxis.jsx';
 import YAxis from './YAxis.jsx';
 import Bar from './Bar.jsx';
+import Tooltip from './Tooltip.jsx';
 import _ from 'lodash';
 const mainWidth = 700;
 const mainHeight = 500;
@@ -21,7 +22,10 @@ class Visualisation extends Component{
       frequencies:[],
       parameters:['No supply', 'Contaminated', 'Low Pressure', 'Drainage Issue']
   }
+    this.mouseOverEventTrigger = this.mouseOverEventTrigger.bind(this);
     this.getFrequencies = this.getFrequencies.bind(this);
+    this.showTooltip = this.showTooltip.bind(this);
+    this.hideTooltip = this.hideTooltip.bind(this);
   }
 
   componentDidMount(){
@@ -31,12 +35,43 @@ class Visualisation extends Component{
     })
       .then((response) => {
         let frequencies = this.getFrequencies(response.data);
+        this.mouseOverEventTrigger(frequencies);
         this.setState({
           connections:response.data,
           frequencies
         });
       });
   }
+
+  componentDidUpdate(){
+    this.mouseOverEventTrigger(this.state.frequencies);
+  }
+
+  showTooltip(d){
+    let frequencies = _.clone(this.state.frequencies);
+    frequencies[d.index].show_tooltip = true;
+    this.setState({
+      frequencies
+    });
+  }
+
+  hideTooltip(d){
+    let frequencies = _.clone(this.state.frequencies);
+    frequencies[d.index].show_tooltip = false;
+    this.setState({
+      frequencies
+    });
+  }
+  mouseOverEventTrigger(frequencies){
+    frequencies.forEach((d, index) => {
+      d3.select(`#bar_${index}`)
+      .datum({d, index})
+      .on("mouseover", this.showTooltip)
+      .on("mouseout", this.hideTooltip);
+    })
+  }
+
+
 
   getFrequencies(connections){
     let  parameters  = this.state.parameters;
@@ -53,7 +88,7 @@ class Visualisation extends Component{
           return connection.drainage_issue === 'Yes'
         }
       }).length;
-      data.push({frequency, param});
+      data.push({frequency, param, show_tooltip:false});
     });
     return data;
   }
@@ -82,8 +117,11 @@ class Visualisation extends Component{
     let bottom = 450;
 
     frequencies.forEach((datum, index) => {
-      bars.push(<Bar key={index} x={x(datum.param)} y={bottom - 6 - (height - y(datum.frequency))} width={50} height={height - y(datum.frequency)} />)
+      bars.push(<Bar index={index} key={index} x={x(datum.param)} y={bottom - 6 - (height - y(datum.frequency))} width={50} height={height - y(datum.frequency)} />)
     });
+    let tooltips = frequencies.map((datum, index) => {
+      return <Tooltip index={index} display={datum.show_tooltip?'':'none'} frequency={datum.frequency} key={index} x={x(datum.param) + 30} y={bottom - 6 - (height - y(datum.frequency))}/>
+    })
     return(
       <svg style={barGraphStyles} width={mainWidth} height={mainHeight}>
          	<YAxis y={40} labels={y.ticks().reverse()} start={15} end={height} />
@@ -91,6 +129,7 @@ class Visualisation extends Component{
 	         { bars }
 	         <XAxis x={ bottom } labels={parameters} start={0} end={width} />
 	      </g>
+        {tooltips}
       </svg>
     );
   }

@@ -9,7 +9,7 @@ class Bar extends React.Component {
       fill: "steelblue"
     };
     return(
-      <g>
+      <g id={`bar_${this.props.index}`}>
 	      <rect className="bar" style={style} x={this.props.x} y={this.props.y + 5} width={this.props.width} height={this.props.height} />
       </g>
     )
