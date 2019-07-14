@@ -86,7 +86,6 @@ class App extends Component{
     });
     connections = connections.length?connections:this.state.all_connections;
     let frequencies = this.getFrequencies(connections);
-    console.log(frequencies, connections)
     this.setState({ selected_option, connections, frequencies });
   };
   render(){
