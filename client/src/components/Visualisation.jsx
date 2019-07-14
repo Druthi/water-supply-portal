@@ -1,18 +1,13 @@
 import React, { Component} from "react";
-
 import XAxis from './XAxis.jsx';
 import YAxis from './YAxis.jsx';
 import Bar from './Bar.jsx';
 import Tooltip from './Tooltip.jsx';
 import _ from 'lodash';
+
 const mainWidth = 700;
 const mainHeight = 500;
 
-
-const barGraphStyles = {
-  margin:'auto',
-  display:'block'
-}
 
 class Visualisation extends Component{
   constructor(props){
@@ -50,8 +45,7 @@ class Visualisation extends Component{
 
     let y = d3.scaleLinear()
       .domain([0, data.length])
-      .range([height, 0])
-
+      .range([height, 0]);
     let bars = [];
     let bottom = 450;
 
@@ -62,7 +56,7 @@ class Visualisation extends Component{
       return <Tooltip index={index} display={datum.show_tooltip?'':'none'} frequency={datum.frequency} key={index} x={x(datum.param) + 30} y={bottom - 6 - (height - y(datum.frequency))}/>
     })
     return(
-      <svg style={barGraphStyles} width={mainWidth} height={mainHeight}>
+      <svg width={mainWidth} height={mainHeight}>
          	<YAxis y={40} labels={y.ticks().reverse()} start={15} end={height} />
            <g className="chart" transform={`translate(${margin.left},${margin.top})`}>
 	         { bars }

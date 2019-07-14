@@ -3,13 +3,9 @@ import Visualisation from './components/Visualisation.jsx';
 import axios from 'axios';
 import Select from 'react-select';
 import _ from 'lodash';
+import styled from 'styled-components';
 
 const get_data_url = 'http://localhost:3000/connections';
-const options = [
-  { value: 'chocolate', label: 'Chocolate' },
-  { value: 'strawberry', label: 'Strawberry' },
-  { value: 'vanilla', label: 'Vanilla' },
-];
 
 class App extends Component{
   constructor(props){
@@ -92,16 +88,45 @@ class App extends Component{
     return(
       <div className="App">
         <h1>Water Supply in Shanthi Nagar</h1>
-        <Select
-        value={this.state.selected_option}
-        isMulti
-        onChange={this.handleChange}
-        options={this.state.options}
-      />
-        <Visualisation parameters={this.state.parameters} showTooltip={this.showTooltip} hideTooltip={this.hideTooltip} frequencies={this.state.frequencies} connections={this.state.connections}/>
+        <MainContainer>
+          <VisualisationContainer className='visualisation_component'>
+            <MultiSelect>
+              <Select
+                value={this.state.selected_option}
+                isMulti
+                onChange={this.handleChange}
+                options={this.state.options}
+              />
+            </MultiSelect>
+            <Visualisation
+              parameters={this.state.parameters}
+              showTooltip={this.showTooltip}
+              hideTooltip= {this.hideTooltip}
+              frequencies={this.state.frequencies}
+              connections={this.state.connections}
+            />
+          </VisualisationContainer>
+        </MainContainer>
       </div>
     );
   }
 }
 
 export default App;
+
+const VisualisationContainer = styled.div`
+  display:flex;
+  justify-content: space-between;
+  background: white;
+`;
+
+const MultiSelect = styled.div`
+  width:25%;
+  margin-top: 5%;
+  margin-left: 4%;
+`;
+
+const MainContainer = styled.div`
+  padding: 2%;
+  background: #e5e5e5;
+`;

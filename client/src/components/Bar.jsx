@@ -1,4 +1,6 @@
 import React, { Component} from "react";
+import styled from 'styled-components';
+
 
 class Bar extends React.Component {
   constructor(props) {
@@ -17,3 +19,7 @@ class Bar extends React.Component {
 }
 
 export default Bar;
+
+const Rect = styled.rect`
+  transition: height 2s;
+`;

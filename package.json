@@ -22,7 +22,10 @@
     "url": "https://github.com/Druthi/water-supply-portal/issues"
   },
   "homepage": "https://github.com/Druthi/water-supply-portal#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "css-loader": "^3.0.0",
+    "style-loader": "^0.23.1"
+  },
   "dependencies": {
     "axios": "^0.18.1",
     "babel-core": "^6.23.1",
@@ -38,6 +41,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-select": "^3.0.4",
+    "styled-components": "^4.3.2",
     "webpack": "^2.2.1"
   }
 }
