@@ -1,5 +1,5 @@
 import React, { Component} from "react";
-import axios from 'axios';
+
 import XAxis from './XAxis.jsx';
 import YAxis from './YAxis.jsx';
 import Bar from './Bar.jsx';
@@ -7,7 +7,7 @@ import Tooltip from './Tooltip.jsx';
 import _ from 'lodash';
 const mainWidth = 700;
 const mainHeight = 500;
-const get_data_url = 'http://localhost:3000/connections';
+
 
 const barGraphStyles = {
   margin:'auto',
@@ -17,92 +17,31 @@ const barGraphStyles = {
 class Visualisation extends Component{
   constructor(props){
     super(props);
-    this.state = {
-      connections:[],
-      frequencies:[],
-      parameters:['No supply', 'Contaminated', 'Low Pressure', 'Drainage Issue']
-  }
-    this.mouseOverEventTrigger = this.mouseOverEventTrigger.bind(this);
-    this.getFrequencies = this.getFrequencies.bind(this);
-    this.showTooltip = this.showTooltip.bind(this);
-    this.hideTooltip = this.hideTooltip.bind(this);
-  }
 
-  componentDidMount(){
-    axios({
-      method: 'get',
-      url: get_data_url,
-    })
-      .then((response) => {
-        let frequencies = this.getFrequencies(response.data);
-        this.mouseOverEventTrigger(frequencies);
-        this.setState({
-          connections:response.data,
-          frequencies
-        });
-      });
+    this.mouseOverEventTrigger = this.mouseOverEventTrigger.bind(this);
   }
 
   componentDidUpdate(){
-    this.mouseOverEventTrigger(this.state.frequencies);
+    this.mouseOverEventTrigger(this.props.frequencies);
   }
 
-  showTooltip(d){
-    let frequencies = _.clone(this.state.frequencies);
-    frequencies[d.index].show_tooltip = true;
-    this.setState({
-      frequencies
-    });
-  }
-
-  hideTooltip(d){
-    let frequencies = _.clone(this.state.frequencies);
-    frequencies[d.index].show_tooltip = false;
-    this.setState({
-      frequencies
-    });
-  }
   mouseOverEventTrigger(frequencies){
     frequencies.forEach((d, index) => {
       d3.select(`#bar_${index}`)
       .datum({d, index})
-      .on("mouseover", this.showTooltip)
-      .on("mouseout", this.hideTooltip);
+      .on("mouseover", this.props.showTooltip)
+      .on("mouseout", this.props.hideTooltip);
     })
   }
 
-
-
-  getFrequencies(connections){
-    let  parameters  = this.state.parameters;
-    let data = [];
-    parameters.forEach((param) => {
-      let frequency = _.filter(connections, (connection) => {
-        if(param === 'No Supply'){
-          return connection.water_quality === 'No Supply'
-        }else if(param === 'Contaminated'){
-          return connection.water_quality === 'Contaminated'
-        }else if(param === 'Low Pressure'){
-          return connection.pressure === 'Low'
-        }else{
-          return connection.drainage_issue === 'Yes'
-        }
-      }).length;
-      data.push({frequency, param, show_tooltip:false});
-    });
-    return data;
-  }
-
-
   render(){
-    let data = this.state.connections;
-    let frequencies = this.state.frequencies;
-
+    let data = this.props.connections;
+    let frequencies = this.props.frequencies;
     let margin = {top: 20, right: 20, bottom: 30, left: 45},
       width = mainWidth - margin.left - margin.right,
       height = mainHeight - margin.top - margin.bottom;
 
-    let parameters = this.state.parameters;
+    let parameters = this.props.parameters;
 
     let ticks = d3.range(0, width, (width / parameters.length));
     let x = d3.scaleOrdinal()
