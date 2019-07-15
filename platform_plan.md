@@ -1,7 +1,7 @@
 ## Water Supply Portal 
 
 ### Objective
-Open source platform to show the failure in supplying water to the residents of Ward 117 of Shanthi Nagar, Bangalore. Analyses the effects of the failure of BWSSB on the health of the residents, as well as increase in total cost of the residents and BWSSB in mitigating the issue.
+Open source platform to show the failure in supplying water to the residents of Ward 117 of Shanthi Nagar, Bangalore. Analyses the effects of the failure of BWSSB on the health of the residents, as well as increase in total cost for the residents and BWSSB in mitigating the issue.
 
 ### Source of Data
 Data is collected by the Shanthi Nagar Residents Welfare Association (SRWA) from the residents of Ward 117 for the month of June 2019 to July 2019.
@@ -17,12 +17,12 @@ Data is collected by the Shanthi Nagar Residents Welfare Association (SRWA) from
 Platform includes a page describing the
 * duties of BWSSB in supplying water
 * the budget allocated for the same
-* process to file a complaint by the resident in the event of failure
+* process to file a complaint by the resident in the event of failure.
 
-This information can give the residents an idea of their rights as citizens. Informing citizens not only increase their civic awareness but also give them lot more power and weight when they lodge complaints. A large majority do not lodge complaints because of their lack of knowledge and access to information that is easily available and readable.
+This information can give the residents an idea of their rights as citizens. Informing citizens not only increase their civic awareness but also give them more power and weight when they lodge complaints. A large majority do not lodge complaints because of their lack of knowledge and access to information that is easily available and readable.
 
 ### Section II - Parameter wise analysis
-Platform has data visualization to analyze the data collected by SRWA in the form of a bar graph that displays the number of connections that fall under each parameter. The four parameters are -
+Platform has a data visualization to analyze the data collected by SRWA in the form of a bar graph that displays the number of connections that fall under each parameter. The four parameters are -
 1.	No supply - No supply of water
 2.	Contaminated - There is water supply, but water is contaminated
 3.	Low pressure - There is water supply however with very low pressure
