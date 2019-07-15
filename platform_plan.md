@@ -1,3 +1,5 @@
+## Water Supply Portal 
+
 ### Objective
 Open source platform to show the failure in supplying water to the residents of Ward 117 of Shanthi Nagar, Bangalore. Analyses the effects of the failure of BWSSB on the health of the residents, as well as increase in total cost of the residents and BWSSB in mitigating the issue.
 
@@ -72,5 +74,5 @@ A time series analysis can be made between the contamination parameter and the i
 1.	Data collection by RWA’s (done quarterly or yearly) consistently to update data to the platform.
 2.	Source of medical records of the residents can be through door to door collection from the residents. An app can be created, or the platform could have a tool that helps users submit data which can be used for the analysis. It can also be collected from hospitals in and around Shanthi Nagar (depending on confidentiality and privacy laws) to understand the number of patients at a given time from Shanthi Nagar.
 
-Note: *Area scope can transcend beyond just Shanthi Nagar and this can be replicated in every Ward in Bangalore. This can help with doing more analysis to see which areas are being neglected by BWSSB and its effects on the welfare of the people (health and social).*
+**Note: _Area scope can transcend beyond just Shanthi Nagar and this can be replicated in every Ward in Bangalore. This can help with doing more analysis to see which areas are being neglected by BWSSB and its effects on the welfare of the people (health and social)._**
 
