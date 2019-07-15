@@ -4,10 +4,10 @@ import YAxis from './YAxis.jsx';
 import Bar from './Bar.jsx';
 import Tooltip from './Tooltip.jsx';
 import _ from 'lodash';
+import styled from 'styled-components';
 
 const mainWidth = 700;
 const mainHeight = 500;
-
 
 class Visualisation extends Component{
   constructor(props){
@@ -63,9 +63,20 @@ class Visualisation extends Component{
 	         <XAxis x={ bottom } labels={parameters} start={0} end={width} />
 	      </g>
         {tooltips}
+        <ConnectionsNumber style={{
+      fontSize: "1em",
+      fill: "black",
+      textAnchor: "end"
+    }} x='650' y='50'>Total number of connections: {data.length}</ConnectionsNumber>
       </svg>
     );
   }
 }
 
 export default Visualisation;
+
+const ConnectionsNumber = styled.text`
+  font-size: 1.0em;
+  fill: black;
+  text-anchor: end;
+`;

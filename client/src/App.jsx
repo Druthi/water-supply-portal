@@ -75,6 +75,7 @@ class App extends Component{
     });
     return data;
   }
+
   handleChange(selected_option) {
     let street_names = _.map(selected_option, (o) =>{return o.label});
     let connections = _.filter(this.state.all_connections, (con) => {
@@ -83,21 +84,25 @@ class App extends Component{
     connections = connections.length?connections:this.state.all_connections;
     let frequencies = this.getFrequencies(connections);
     this.setState({ selected_option, connections, frequencies });
-  };
+  }
+
   render(){
     return(
       <div className="App">
         <h1>Water Supply in Shanthi Nagar</h1>
         <MainContainer>
           <VisualisationContainer className='visualisation_component'>
-            <MultiSelect>
-              <Select
-                value={this.state.selected_option}
-                isMulti
-                onChange={this.handleChange}
-                options={this.state.options}
-              />
-            </MultiSelect>
+            <Filters>
+              <FilterLabel>Filter by street name</FilterLabel>
+              <MultiSelect>
+                <Select
+                  value={this.state.selected_option}
+                  isMulti
+                  onChange={this.handleChange}
+                  options={this.state.options}
+                />
+              </MultiSelect>
+            </Filters>
             <Visualisation
               parameters={this.state.parameters}
               showTooltip={this.showTooltip}
@@ -121,12 +126,22 @@ const VisualisationContainer = styled.div`
 `;
 
 const MultiSelect = styled.div`
-  width:25%;
-  margin-top: 5%;
-  margin-left: 4%;
+  width: 60%;
+  margin-left: 14%;
 `;
 
 const MainContainer = styled.div`
   padding: 2%;
   background: #e5e5e5;
+`;
+
+const FilterLabel = styled.p`
+  padding-top: 7%;
+  padding-left: 14%;
+`;
+
+const Filters = styled.div`
+  display:flex;
+  flex-direction:column;
+  width: 42%;
 `;
