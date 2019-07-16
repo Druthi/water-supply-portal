@@ -1,0 +1,147 @@
+﻿Sl. No,Street Name,Door No.,Water Quality,Pressure,Timing,Drainage Issue,Other
+1,Basappa Road,,Contaminated,Low,4.00-6.00 a.m.,Yes,Blockage on Main Road
+2,Basappa Road,#1/1,Contaminated,Good,4.00-6.00 a.m.,Yes,Outside Drainage Blockage
+3,Basappa Road,#1/2,Contaminated,Low,4.00-6.00 a.m.,Yes,On the main road
+4,Basappa Road,#3,Contaminated,Low,,Yes,Frequent Blockage
+5,Basappa Road,#4/1,,Low,,Yes,Every 15 days
+6,Basappa Road,#54/2,Contaminated,Low,,Yes,Frequent Blockage
+7,Rangaswamy Compound,#21/2,Contaminated,Low,,Yes,Frequent Blockage - Using Bore-wells since 4 years
+8,Basappa Road,#1/1,No Supply,No Supply,,Yes,Frequent Blockage
+9,Rangaswamy Compound,#21,No Supply,No Supply,,Yes,Frequent Blockage
+10,Basappa Road,#21,No Supply,No Supply,,Yes,Frequent Blockage
+11,Basappa Road,#8/21,No Supply,No Supply,,Yes,Frequent Blockage - Past 4 years
+12,Basappa Road,#11/21,No Supply,No Supply,,Yes,Frequent Blockage - Past 4 years
+13,Basappa Road,,No Supply,No Supply,,Yes,Frequent Blockage - Past 4 years
+14,Basappa Road,#10/21,No Supply,No Supply,,Yes,Frequent Blockage - Past 4 years
+15,Basappa Road,#8/21,No Supply,No Supply, ,Yes,Frequent Blockage - Past 4 years
+16,Basappa Road,,No Supply,No Supply,,Yes,Frequent Blockage - Past 4 years
+17,Basappa Road,#3/1,Good,Good,,No,
+18,Basappa Road,#52/2,Good,Good,,No,
+19,Basappa Road,#52,Good,Good,4.00-6.00 a.m.,No,
+20,Basappa Road,#10,Good,Good,5.00-7.00 a.m.,No,
+21,Basappa Road,#51,Good,Good,5.00-7.00 a.m.,No,
+22,Basappa Road,#50,Contaminated,Low,5.00-7.00 a.m.,No,
+23,Basappa Road,#5,Contaminated,Low,4.00-7.00 a.m.,No,
+24,Basappa Road,#49,Contaminated,Low,,,
+25,Basappa Road,#38,Contaminated,Low,,,
+26,Basappa Road,#48,Good,Good,,,
+27,Basappa Road,#47,Good,Good,4.00-7.00 a.m.,,
+28,Basappa Road,#7,,,,,
+29,Basappa Road,#8,Contaminated,Low,,Disconnected,
+30,Basappa Road,#9,,,,,
+31,Basappa Road,#45/45,Contaminated,Low,,Disconnected,
+32,Basappa Road,#10,,,,,
+33,Basappa Road,#44,Contaminated,Low,4.00-7.00 a.m.,,
+34,Basappa Road,#11,Contaminated,Low,,,
+35,Basappa Road,#12,Contaminated,Low,5.00-7.00 am,,
+36,Basappa Road,#17,Good,Low,5.00-7.00 am,,
+37,Basappa Road,#6,Good,Low,5.00-7.00 am,,
+38,Basappa Road,#42,Good,Good,5.00-7.00 am,,
+39,Basappa Road,#43,Good,Low,4.30-7.00 am,,
+40,Basappa Road,#18/1,Contaminated,low,5.00-7.00 am,,
+41,Basappa Road,#41,Contaminated,Low,5.00-7.00 am,,
+42,Basappa Road,#31,Contaminated,Low,,,
+43,Basappa Road,#41,No Supply,No Supply,,,
+44,Basappa Road,#14,Contaminated,Low,,,
+45,Basappa Road,#15,Contaminated,Low,4.00-6.30 am,,
+46,Basappa Road,#40,Contaminated,Low,,,
+47,Basappa Road,#16,Contaminated,Low,,,
+48,Basappa Road,#38,Contaminated,Low,,,
+49,Basappa Road,#39,Contaminated,Low,,,
+50,Basappa Road,#36/37,Contaminated,Low,,,
+51,Basappa Road,#35,No Supply,No Supply,,,
+52,Basappa Road,#34,Contaminated,Low,,,
+53,Basappa Road,#43/6,Contaminated,Low,4.00-6.30 am,Yes,Towards Basappa Road
+54,Basappa Road,#43/6,Contaminated,Low,4.00-6.30 am,Yes,
+55,Basappa Road,#43/3,No Supply,No Supply,,Yes,
+56,Basappa Road,#002,No Supply,No Supply,,Yes,
+57,Basappa Road,#18,Contaminated,Low,,,
+58,Nanjappa Road,#2/6,Contaminated,Low,,Yes,Drainage water comes to the open Drain
+59,Nanjappa Road,#2/9,Contaminated,Low,,yes,Drainage water comes to the open Drain
+60,Nanjappa Road,#2/7,Contaminated,Low,,Yes,Drainage water comes to the open Drain
+61,Nanjappa Road,#2/8,Contaminated,Low,,Yes,Drainage water comes to the open Drain
+62,Nanjappa Road,#2/11B,Good,Low,,Yes,Drainage water comes to the open Drain
+63,Nanjappa Road,#2/8C,Good,Low,No Proper Timing,Yes,Drainage water comes to the open Drain
+64,Nanjappa Road,#2/8-B,Contaminated,Low,No Proper Timing,Yes,Drainage water comes to the open Drain
+65,Nanjappa Road,#10/B,Contaminated,Low,8.30-12.00 pm,No,
+66,Nanjappa Road,#11,Good,Low,,,
+67,Nanjappa Road,#29,Good,Good,,,
+68,Nanjappa Road,#29/3,Good,Low,,,
+69,Nanjappa Road,#34/1,Good,Low,No Proper Timing,,
+70,Nanjappa Road,#29/6,Good,low,,,
+71,Nanjappa Road,#28,Contaminated,Low,7.00 am,,
+72,Nanjappa Road,#25/A,Contaminated,Low,7.00am,,
+73,Nanjappa Road,#26,Contaminated,Low,after 7.00am,,
+74,Nanjappa Road,#101,Contaminated,Low,after 7.00am,,
+75,Nanjappa Road,#7,Contaminated,Low,No Proper Timing,Yes,
+76,Nanjappa Road,#2/8A,Contaminated,Low,No Proper Timing,,
+77,Nanjappa Road,#202,Good,Low,No Proper Timing,Yes,Always leaking
+78,Nanjappa Road,#7 F-401,Contaminated,Low,No Proper Timing,,
+79,Nanjappa Road,#18,Good,Low,4.00-6.30 am,,
+80,Nanjappa Road,#5&5/1,Good,Low,4.00-6.30 am,,
+81,Nanjappa Road,#201,Contaminated,Low,4.00-6.30 am,Yes,
+82,Nanjappa Road,#19,No Supply,No Supply,,,Using Tanker
+83,Nanjappa Road,#20,Good,Low,6.20- 8.00 am,,
+84,Nanjappa Road,#81/1`,Good,Low,4.00-6.30 am,,
+85,Nanjappa Road,#4,Good,Low,5.00-7.00 am,,
+86,Nanjappa Road,#1/2,Good,Low,9.00 am-12. pm,,
+87,Chowdappa Road,#26/A,Good,Low,,Yes,Man-hole inside plastering
+88,Chowdappa Road,#8/B,Good,Low,,,
+89,Chowdappa Road,#8/C,Good,Low,,,
+90,Chowdappa Road,#8/A,,,,,
+91,Chowdappa Road,#8/2,Good,Low,,,
+92,Chowdappa Road,#6,Good,Low,,,
+93,Chowdappa Road,#6/A,Good,Low,,,
+94,Chowdappa Road,#22,Good,Low,,,
+95,Chowdappa Road,#36/7,Good,Low,,,
+96,Chowdappa Road,#8,Good,low,,,
+97,Chowdappa Road,#20,Good,Low,,,
+98,Chowdappa Road,#16/1,Good,Low,,,
+99,Chowdappa Road,#16,Good,Low,,,
+100,Chowdappa Road,#14 ,,Low,,,
+101,Chowdappa Road,#17,Good,Low,,,
+102,Chowdappa Road,#13,Good,Low,,,
+103,Chowdappa Road,#24/1,Good,Low,,,
+104,Chowdappa Road,#25,Good,low,,,
+105,Chowdappa Road,#13 ,Good,Low,,,
+106,Chowdappa Road,#32,Good,low,,,
+107,St. Michael Road,#40/1,Contaminated,low,,Yes,Frequent Blockage
+108,St. Michael Road,#20,Contaminated,low,,,
+109,St. Michael Road,#433,,Low,,Yes,Frequent Blockage
+110,St. Michael Road,#431,,Low,,Yes,Frequent Blockage
+111,St. Michael Road,#21,,low,,Yes,Frequent Blockage
+112,St. Michael Road,#8/G ,,Low,,,
+113,St. Michael Road,#8/H,,Low,,,
+114,St. Michael Road,#8/K,Contaminated,low,,,
+115,Andree Road,6 Flats,No Supply,No Supply,,,
+116,Andree Road,8 Flats,Good,Good,,No,
+117,Andree Road,16 Flats,No Supply,No Supply,,No,
+118,Andree Road,17 Flats,No Supply,No Supply,,,
+119,Andree Road,1A,No Supply,No Supply,,,Frequent Blockage - Plating to be done
+120,Andree Road,19 Flats,Contaminated,Low,4.00 -5.30 am,,
+121,Andree Road,15 Flats,Good,Low,4.00 -5.30 am,,
+122,Andree Road,13 Flats,Good,Low,,,
+123,Andree Road,#12/1,Good,Low,4.00 -5.30 am,,
+124,Andree Road,,Good,Good,9.00-10.30am,,
+125,Andree Road,#7,No Supply,No Supply,,,
+126,Andree Road,#21,Contaminated,Low,9.00-9.30am,,"10,000 lts per month"
+127,Andree Road,#1/A I floor,Contaminated,Low,9.00-9.30am,,
+128,Langford Cross,,#35/17,No Supply,No Supply,,
+129,Lakshmi Road,#21/7,No Supply,No Supply,,,
+130,Lakshmi Road,#22,Contaminated,Low,4.00-6.00am,,
+131,Lakshmi Road,#1,Good,Good,4.00-7.00am,,
+132,Lakshmi Road,#6,Good,Good,4.00-6.30am,,
+133,Lakshmi Road,#21/4,Good,Good,4.30-6.30am,,
+134,Lakshmi Road,#1,Contaminated,Low,4.30-6.30am,,
+135,Lakshmi Road,#2,Good,Good,4.00-6.30am,,
+136,Lakshmi Road,#21/1A,Contaminated,Low,4.30-6.30am,,
+137,Lakshmi Road I Cross,#8/2,Good,Good,4.30-6.30am,,
+138,Lakshmi Road I Cross,#9,Good,Good,4.30-6.30am,,
+139,Lakshmi Road I Cross,#13,Good,Low,4.30-6.30am,,
+140,Lakshmi Road I Cross,#14,Contaminated,Low,4.30-6.30am,,
+141,Lakshmi Road I Cross,#10/15,Contaminated,Low,4.30-6.30am,,
+142,Lakshmi Road I Cross,#201,Good,Good,5.00-700 am,,
+143,Lakshmi Road I Cross,#14,Good,Good,4.30-.6.15 am,,
+144,Lakshmi Road I Cross,#1,Good,Good,4.30-.6.15 am,,
+145,Lakshmi Road I Cross,#1/1,Good,Good,5.00-630 am,,
+146,Lakshmi Road I Cross,#4,Good,low,4.30-6.30 am,,
