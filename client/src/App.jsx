@@ -4,13 +4,15 @@ import axios from 'axios';
 import Select from 'react-select';
 import _ from 'lodash';
 import styled from 'styled-components';
+import { CSVLink, CSVDownload } from "react-csv";
 
-const get_data_url = 'http://localhost:3000/connections';
+const get_data_url = 'http://localhost:3000';
 
 class App extends Component{
   constructor(props){
     super(props);
     this.state={
+      csv:'',
       connections:[],
       selected_option:null,
       options:[],
@@ -22,24 +24,28 @@ class App extends Component{
     this.getFrequencies = this.getFrequencies.bind(this);
     this.showTooltip = this.showTooltip.bind(this);
     this.hideTooltip = this.hideTooltip.bind(this);
+    this.downloadCsv = this.downloadCsv.bind(this);
   }
 
   componentDidMount(){
     axios({
       method: 'get',
-      url: get_data_url,
+      url: `${get_data_url}/connections`,
     })
       .then((response) => {
         let street_names = _.uniqBy(response.data, 'street_name').map((street) => {return {value:street.street_name, label:street.street_name}});
         let frequencies = this.getFrequencies(response.data);
+        let csv = this.downloadCsv(response.data);
         this.setState({
           connections:response.data,
           all_connections:response.data,
           options:street_names,
-          frequencies
+          frequencies,
+          csv
         });
       });
   }
+
   showTooltip(d){
     let frequencies = _.clone(this.state.frequencies);
     frequencies[d.index].show_tooltip = true;
@@ -83,7 +89,22 @@ class App extends Component{
     });
     connections = connections.length?connections:this.state.all_connections;
     let frequencies = this.getFrequencies(connections);
-    this.setState({ selected_option, connections, frequencies });
+    let csv = this.downloadCsv(connections);
+    this.setState({ selected_option, connections, frequencies, csv });
+  }
+
+  downloadCsv(connections){
+    let data = [];
+    let headers = Object.keys(connections[0]);
+    headers.shift();
+    data.push(headers);
+    connections.forEach((obj, i) => {
+      let values = Object.values(obj);
+      values.shift();
+      values[0] = i+1;
+      data.push(values);
+    });
+    return data;
   }
 
   render(){
@@ -93,6 +114,14 @@ class App extends Component{
         <MainContainer>
           <VisualisationContainer className='visualisation_component'>
             <Filters>
+            <CSV>
+          <CSVLink
+            data={this.state.csv}
+          >
+          Download CSV
+          </CSVLink>
+        </CSV>
+
               <FilterLabel>Filter by street name</FilterLabel>
               <MultiSelect>
                 <Select
@@ -144,4 +173,9 @@ const Filters = styled.div`
   display:flex;
   flex-direction:column;
   width: 42%;
+`;
+
+const CSV = styled.div`
+  margin-top: 4%;
+  margin-left: 14%;
 `;

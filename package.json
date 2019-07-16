@@ -39,6 +39,7 @@
     "morgan": "^1.9.1",
     "pg-promise": "^8.7.3",
     "react": "^16.8.6",
+    "react-csv": "^1.1.1",
     "react-dom": "^16.8.6",
     "react-select": "^3.0.4",
     "styled-components": "^4.3.2",
