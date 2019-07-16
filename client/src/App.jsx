@@ -4,7 +4,7 @@ import axios from 'axios';
 import Select from 'react-select';
 import _ from 'lodash';
 import styled from 'styled-components';
-import { CSVLink, CSVDownload } from "react-csv";
+import { CSVLink } from "react-csv";
 
 const get_data_url = 'http://localhost:3000';
 
