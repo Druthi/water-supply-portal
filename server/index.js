@@ -2,7 +2,8 @@ const express = require('express');
 let app = express();
 const morgan = require('morgan');
 var bodyParser = require('body-parser');
-var db = require ('../database/index')
+var db = require ('../database/index');
+var fs = require('fs');
 
 
 app.use(morgan());
@@ -17,6 +18,7 @@ app.get('/connections', (req,res) =>{
     }
   });
 });
+
 
 let port = process.env.PORT || 3000;
 
