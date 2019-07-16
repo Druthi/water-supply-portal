@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "server-dev": "nodemon server/index.js",
-    "start": "node server/index.js",
+    "start": "webpack -d --watch & node server/index.js",
     "react-dev": "webpack -d --watch",
     "seed": "psql postgres < schema.sql",
     "server:start": "pg_ctl -D /usr/local/var/postgres start",
