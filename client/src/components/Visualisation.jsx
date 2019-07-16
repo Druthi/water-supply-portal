@@ -56,17 +56,14 @@ class Visualisation extends Component{
     })
     return(
       <svg width={mainWidth} height={mainHeight}>
+          <YAxisText x='200' y='0'>No. of connections</YAxisText>
          	<YAxis y={40} labels={y.ticks().reverse()} start={15} end={height} />
            <g className="chart" transform={`translate(${margin.left},${margin.top})`}>
 	         { bars }
 	         <XAxis x={ bottom } labels={parameters} start={0} end={width} />
 	      </g>
         {tooltips}
-        <ConnectionsNumber style={{
-      fontSize: "1em",
-      fill: "black",
-      textAnchor: "end"
-    }} x='650' y='50'>Total number of connections: {data.length}</ConnectionsNumber>
+        <ConnectionsNumber x='650' y='50'>Total number of connections: {data.length}</ConnectionsNumber>
       </svg>
     );
   }
@@ -78,4 +75,9 @@ const ConnectionsNumber = styled.text`
   font-size: 1.0em;
   fill: black;
   text-anchor: end;
+`;
+
+const YAxisText = styled.text`
+  color:black;
+  transform: rotate(90deg);
 `;
