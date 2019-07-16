@@ -68,13 +68,13 @@ class App extends Component{
     parameters.forEach((param) => {
       let frequency = _.filter(connections, (connection) => {
         if(param === 'No Supply'){
-          return connection.water_quality === 'No Supply'
+          return connection.water_quality === 'No Supply';
         }else if(param === 'Contaminated'){
-          return connection.water_quality === 'Contaminated'
+          return connection.water_quality === 'Contaminated';
         }else if(param === 'Low Pressure'){
-          return connection.pressure === 'Low'
+          return connection.pressure === 'Low' || connection.pressure === 'low';
         }else{
-          return connection.drainage_issue === 'Yes'
+          return connection.drainage_issue === 'Yes';
         }
       }).length;
       data.push({frequency, param, show_tooltip:false});
