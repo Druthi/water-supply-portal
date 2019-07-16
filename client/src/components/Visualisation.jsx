@@ -12,7 +12,6 @@ const mainHeight = 500;
 class Visualisation extends Component{
   constructor(props){
     super(props);
-
     this.mouseOverEventTrigger = this.mouseOverEventTrigger.bind(this);
   }
 
@@ -44,7 +43,7 @@ class Visualisation extends Component{
       .range(ticks)
 
     let y = d3.scaleLinear()
-      .domain([0, data.length])
+      .domain([0, Math.max(data.length, 8)])
       .range([height, 0]);
     let bars = [];
     let bottom = 450;
