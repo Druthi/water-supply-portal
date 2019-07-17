@@ -15,7 +15,7 @@ Data visualisation to show the failure in supplying water to the residents of Wa
 4. Fill `example.config.js` and rename to `config.js`
 5. Run `npm run seed` - To seed database
 6. Run `npm start` - To build js scripts and start node server
-7. Open `localhost:3000` on browser
+7. Open `localhost:3000` in browser
 
 ### Platform Architecture
 
