@@ -11,7 +11,9 @@
     "server-dev": "nodemon server/index.js",
     "start": "webpack -d --watch & node server/index.js",
     "react-dev": "webpack -d --watch",
+    "build":"webpack -d --watch",
     "seed": "psql postgres < schema.sql",
+    "heroku-postbuild": "npm install && cd client && npm install --only-dev && npm install && npm run build",
     "server:start": "pg_ctl -D /usr/local/var/postgres start",
     "server:stop": "pg_ctl -D /usr/local/var/postgres stop",
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,6 +1,6 @@
-drop database if exists water_supply;
-create database water_supply;
-\connect water_supply;
+-- drop database if exists water_supply;
+-- create database water_supply;
+-- \connect water_supply;
 
 CREATE TABLE  connections(
     id SERIAL primary key,

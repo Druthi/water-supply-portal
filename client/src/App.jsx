@@ -30,7 +30,7 @@ class App extends Component{
   componentDidMount(){
     axios({
       method: 'get',
-      url: `${get_data_url}/connections`,
+      url: `/connections`,
     })
       .then((response) => {
         let street_names = _.uniqBy(response.data, 'street_name').map((street) => {return {value:street.street_name, label:street.street_name}});
