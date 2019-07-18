@@ -1,5 +1,8 @@
-# water-supply-portal
+# water-supply-portal 
 Data visualisation to show the failure in supplying water to the residents of Ward 117 of Shanthi Nagar, Bangalore.
+
+### Link to the portal
+https://water-supply-portal.herokuapp.com/ 
 
 ### Technologies used
 * Front end - React, D3, Styled Components
